@@ -1,8 +1,14 @@
-import format from "date-fns/format"
+import ms from 'ms'
+import lunchtime from './lunchtime.js'
+import millisecondsUntil from './millisecondsUntil.js'
 
-var span = document.querySelector('#time-now')
-
-export default function update() {
-  span.textContent = format(new Date(), 'hh:mm:ssa')
-  setTimeout(update, 1000)
+export default function howLongTillLunch(hours, minutes) {
+  if (hours === undefined) {
+    hours = '12'
+  }
+  if (minutes === undefined) {
+    minutes = '00'
+  }
+  const millisecondsUntilLunch = millisecondsUntil(lunchtime(hours, minutes))
+  return ms(millisecondsUntilLunch, { long: true })
 }

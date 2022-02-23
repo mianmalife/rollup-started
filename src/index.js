@@ -1,5 +1,3 @@
-import update from './main.js'
+const howLongTillLunch = require('../dist/how-long-till-lunch.cjs')
 
-console.log('The time is...')
-
-update()
+console.log(howLongTillLunch(), '吃午饭')
