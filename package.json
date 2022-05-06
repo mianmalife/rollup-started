@@ -2,9 +2,9 @@
   "name": "rollup-started",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/freeTree.cjs.js",
-  "module": "dist/freeTree.esm.js",
-  "browser": "dist/freeTree.umd.js",
+  "main": "dist/commonTool.cjs.js",
+  "module": "dist/commonTool.esm.js",
+  "browser": "dist/commonTool.umd.js",
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -c -w",
@@ -36,7 +36,7 @@
     "serve": "^13.0.2"
   },
   "dependencies": {
-    "rc-tree": "^5.5.0",
+    "core-js": "^3.22.4",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },

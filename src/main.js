@@ -1,38 +1,9 @@
-import React from "react"
-import ReactDOM from "react-dom"
-import RcTree from 'rc-tree'
-import "rc-tree/assets/index.css"
-const treeData = [
-  {
-    title: 'parent 1',
-    key: '0-0',
-    children: [
-      {
-        title: 'parent 1-0',
-        key: '0-0-0',
-        disabled: true,
-        children: [
-          {
-            title: 'leaf',
-            key: '0-0-0-0',
-            disableCheckbox: true,
-          },
-          {
-            title: 'leaf',
-            key: '0-0-0-1',
-          },
-        ],
-      },
-      {
-        title: 'parent 1-1',
-        key: '0-0-1',
-        children: [{ title: <span style={{ color: '#1890ff' }}>sss</span>, key: '0-0-1-0' }],
-      },
-    ],
-  },
-]
-function FreeTree() {
-  return <RcTree treeData={treeData} />
+export const isArrayType = (value) => {
+  return Array.isArray(value)
 }
-
-ReactDOM.render(<FreeTree />, document.getElementById('freeTree'))
+export const isFilterNum = (value) => {
+  return value.filter(item => typeof item === 'number')
+}
+export const isIncludesZero = value => {
+  return value.includes(0)
+}
